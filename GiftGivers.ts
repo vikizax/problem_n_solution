@@ -95,7 +95,7 @@ class GiftGivers {
             }
 
         } catch (err) {
-            console.error('CALCULATE_ERROR', err)
+            console.error('CALCULATE_ERROR.', err)
         }
     }
 
@@ -113,10 +113,9 @@ class GiftGivers {
             })
             await writeFile('output.txt', fileContent)
         } catch (err) {
-            console.error('FILE_OUTPUT_ERROR', err)
+            console.error('FILE_OUTPUT_ERROR.', err)
         }
     }
-
 
     init() {
         try {
@@ -125,6 +124,8 @@ class GiftGivers {
                 const participantName = this.#inputs[i]
                 if (this.#participantToVal[participantName] !== undefined)
                     throw "Number of participants does not map to number of participants name"
+                if (isNaN(Number(participantName)) === false)
+                    throw "Participant name cannot be a number"
                 this.#participantToVal[participantName] = 0
             }
             if (Object.keys(this.#participantToVal).length !== this.#participantCount)

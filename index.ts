@@ -16,4 +16,4 @@ lineReader.on('close', () => {
     giftGivers.init()
     giftGivers.calculate()
     giftGivers.getOutputToFile()
-})
+});
