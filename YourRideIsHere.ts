@@ -28,7 +28,9 @@ class YourRideIsHere {
 
   #getCharPosition(char: string) {
     const charAscii = char.toUpperCase().charCodeAt(0);
-    if (charAscii > 64 && charAscii < 91) return charAscii - 64;
+    const start = "A".charCodeAt(0) - 1,
+      end = "Z".charCodeAt(0) + 1;
+    if (charAscii > start && charAscii < end) return charAscii - 64;
   }
 
   #getResult(x: string, y: string): ResultType {
