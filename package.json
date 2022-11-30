@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start": "tsc & node ./build/index.js input.txt",
+      "start": "tsc & node ./build/index.js input.in",
       "build": "tsc"
     },
     "author": "",

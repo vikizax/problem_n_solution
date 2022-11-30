@@ -28,7 +28,7 @@ class YourRideIsHere {
 
     #getCharPosition(char: string) {
         const charAscii = char.toUpperCase().charCodeAt(0);
-        if (charAscii > 63 && charAscii < 91) return charAscii - 64;
+        if (charAscii > 64 && charAscii < 91) return charAscii - 64;
     }
 
     #getResult(x: string, y: string): ResultType {
@@ -72,7 +72,7 @@ class YourRideIsHere {
     }
 
     getResult() {
-        const w_stream = createWriteStream('output.txt')
+        const w_stream = createWriteStream('output.out')
         for (let i = 0; i < this.#result.length; i++) {
             const { input1, input2, result } = this.#result[i]
             const out = `[${input1}, ${input2}] : ${result}`
