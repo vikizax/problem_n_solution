@@ -23,6 +23,11 @@ public class Node {
         return this.count;
     }
 
+    public int increaseCount() {
+        this.count += 1;
+        return this.count;
+    }
+
     public int reduceCount() {
         this.count -= 1;
         return this.count;
@@ -39,8 +44,8 @@ public class Node {
         return this.next;
     }
 
-    public void setNext(Node next) {
-        this.next = next;
+    public void setNext(Node node) {
+        this.next = node;
     }
 
 }
