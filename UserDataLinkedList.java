@@ -95,7 +95,7 @@ public class UserDataLinkedList {
 
     private void printDataHeader() {
         System.out.format("\n%22s %15s %22s %22s %8s %18s %12s\n", "Name", "Religion", "City", "Mother Tongue", "Age",
-                "Annual Income", "No. of Vehical");
+                "Annual Income", "No. of Vehicle");
     }
 
     public void displayAllData() {
